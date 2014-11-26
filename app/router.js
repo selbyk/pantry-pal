@@ -5,7 +5,20 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
+Router.reopen({
+  notifyGoogleAnalytics: function() {
+    return ga('send', 'pageview', {
+        'page': this.get('url'),
+        'title': this.get('url')
+      });
+  }.on('didTransition')
+});
+
 Router.map(function() {
+  this.route('index', { path: '/' });
+  this.route('team', { path: '/team' });
+  this.route('stack');
+  this.route('erd');
 });
 
 export default Router;
