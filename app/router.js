@@ -15,6 +15,8 @@ Router.reopen({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' });
+  this.route('team', { path: '/team' });
 });
 
 export default Router;
