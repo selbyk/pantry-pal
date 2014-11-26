@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('index', { path: '/' });
   this.route('team', { path: '/team' });
   this.route('stack');
+  this.route('erd');
 });
 
 export default Router;
